@@ -2,7 +2,7 @@
  * @file aos_wifi_client.c
  * @author Michele Riva (michele.riva@protonmail.com)
  * @brief AOS WiFi client implementation
- * @version 0.1
+ * @version 0.9.0
  * @date 2023-04-18
  *
  * @copyright Copyright (c) 2023

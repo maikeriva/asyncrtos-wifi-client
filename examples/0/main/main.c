@@ -2,7 +2,7 @@
  * @file main.c
  * @author Michele Riva (micheleriva@protonmail.com)
  * @brief AOS WiFi client example 0
- * @version 0.1
+ * @version 0.9.0
  * @date 2023-04-17
  *
  * @copyright Copyright (c) 2023
