@@ -1,0 +1,54 @@
+menu "AOS WiFi client"
+
+    choice AOS_WIFI_CLIENT_LOG
+        bool "Default log verbosity"
+        default AOS_WIFI_CLIENT_LOG_INFO
+        help
+            Specify how much output to see in logs by default.
+            You can set lower verbosity level at runtime using
+            esp_log_level_set function.
+
+            Note that this setting limits which log statements
+            are compiled into the program. So setting this to, say,
+            "Warning" would mean that changing log level to "Debug"
+            at runtime will not be possible.
+
+        config AOS_WIFI_CLIENT_LOG_NONE
+            bool "No output"
+        config AOS_WIFI_CLIENT_LOG_ERROR
+            bool "Error"
+        config AOS_WIFI_CLIENT_LOG_WARNING
+            bool "Warning"
+        config AOS_WIFI_CLIENT_LOG_INFO
+            bool "Info"
+        config AOS_WIFI_CLIENT_LOG_DEBUG
+            bool "Debug"
+        config AOS_WIFI_CLIENT_LOG_VERBOSE
+            bool "Verbose"
+    endchoice
+
+    menu "Task"
+
+        config AOS_WIFI_CLIENT_TASK_QUEUESIZE
+            int "Queue size"
+            default 3
+            help
+                A higher size prevents blocking when multiple async
+                requests are processed at the expense of memory consumption.
+
+        config AOS_WIFI_CLIENT_TASK_STACKSIZE
+            int "Stack size"
+            default 3072
+            help
+                Default is calibrated on log output set to INFO. A bigger stack
+                may be necessary when setting more verbose log levels.
+
+        config AOS_WIFI_CLIENT_TASK_PRIORITY
+            int "Priority"
+            default 1
+            help
+                Ensure this is set in coordination with other system tasks.
+
+    endmenu
+
+endmenu
