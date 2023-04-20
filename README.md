@@ -13,8 +13,12 @@ The official ESP-IDF wifi API is good, but it is not always idempotent. When bui
 - Has keep-alive functionality (automatically reconnects in case of errors)
 - Performs multiple connection attepts before giving up
 
-Feel free to contribute, or buy me a coffee.
+## How do I use this?
 
-## How to use this
+Check out the examples folder.
 
-Here's a simple example. It provides no error checking for illustration purposes, always check futures are resolved with `aos_isresolved` and `out_err` values.
+## How do I contribute?
+
+Feel free to contribute with code or a coffee :)
+
+<a href="https://www.buymeacoffee.com/micriv" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
